@@ -1,0 +1,2049 @@
+{
+    "name": "root",
+    "est_rt_lo_m": null,
+    "est_rt_up_m": null,
+    "CATEGORIES": [
+        {
+            "name": "Fatty Acyls [FA]",
+            "est_rt_lo_m": null,
+            "est_rt_up_m": null,
+            "MAIN_CLASSES": [
+                {
+                    "name": "Other Fatty Acyls [FA00]",
+                    "est_rt_lo_m": null,
+                    "est_rt_up_m": null,
+                    "SUB_CLASSES": [
+                        {
+                            "name": "Cholesterol and derivatives [ST0101]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "C5 isoprenoids (hemiterpenes) [PR0101]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Monoacylaminosugars [SL0101]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        }
+                    ]
+                },
+                {
+                    "name": "Fatty Acids and Conjugates [FA01]",
+                    "est_rt_lo_m": null,
+                    "est_rt_up_m": null,
+                    "SUB_CLASSES": [
+                        {
+                            "name": "Straight chain fatty acids [FA0101]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Branched fatty acids [FA0102]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Unsaturated fatty acids [FA0103]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Hydroperoxy fatty acids [FA0104]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Hydroxy fatty acids [FA0105]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Oxo fatty acids [FA0106]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Epoxy fatty acids [FA0107]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Methoxy fatty acids [FA0108]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Halogenated fatty acids [FA0109]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Amino fatty acids [FA0110]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Cyano fatty acids [FA0111]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Nitro fatty acids [FA0112]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Thia fatty acids [FA0113]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Carbocyclic fatty acids [FA0114]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Heterocyclic fatty acids [FA0115]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Mycolic acids [FA0116]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Dicarboxylic acids [FA0117]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        }
+                    ]
+                },
+                {
+                    "name": "Octadecanoids [FA02]",
+                    "est_rt_lo_m": null,
+                    "est_rt_up_m": null,
+                    "SUB_CLASSES": [
+                        {
+                            "name": "Other Octadecanoids [FA0200]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "12-oxophytodienoic acid metabolites [FA0201]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Jasmonic acids [FA0202]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Phytoprostanes [FA0203]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Phytofurans [FA0204]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Octadeca-1,2-dioxolanes [FA0205]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        }
+                    ]
+                },
+                {
+                    "name": "Eicosanoids [FA03]",
+                    "est_rt_lo_m": null,
+                    "est_rt_up_m": null,
+                    "SUB_CLASSES": [
+                        {
+                            "name": "Other Eicosanoids [FA0300]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Prostaglandins [FA0301]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Leukotrienes [FA0302]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Thromboxanes [FA0303]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Lipoxins [FA0304]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Hydroxy/hydroperoxyeicosatrienoic acids [FA0305]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Hydroxy/hydroperoxyeicosatetraenoic acids [FA0306]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Hydroxy/hydroperoxyeicosapentaenoic acids [FA0307]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Epoxyeicosatrienoic acids [FA0308]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Hepoxilins [FA0309]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Levuglandins [FA0310]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Isoprostanes [FA0311]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Clavulones [FA0312]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Isofurans [FA0313]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Resolvin Es [FA0314]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Eicosa-1,2-dioxolanes [FA0315]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        }
+                    ]
+                },
+                {
+                    "name": "Docosanoids [FA04]",
+                    "est_rt_lo_m": null,
+                    "est_rt_up_m": null,
+                    "SUB_CLASSES": [
+                        {
+                            "name": "Other Docosanoids [FA0400]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Neuroprostanes [FA0401]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Neurofurans [FA0402]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Resolvin Ds [FA0403]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Protectins [FA0404]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Maresins [FA0405]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Docosa-1,2-dioxolanes [FA0406]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        }
+                    ]
+                },
+                {
+                    "name": "Fatty alcohols [FA05]",
+                    "est_rt_lo_m": null,
+                    "est_rt_up_m": null
+                },
+                {
+                    "name": "Fatty aldehydes [FA06]",
+                    "est_rt_lo_m": null,
+                    "est_rt_up_m": null
+                },
+                {
+                    "name": "Fatty esters [FA07]",
+                    "est_rt_lo_m": null,
+                    "est_rt_up_m": null,
+                    "SUB_CLASSES": [
+                        {
+                            "name": "Wax monoesters [FA0701]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Wax diesters [FA0702]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Cyano esters [FA0703]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Lactones [FA0704]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Fatty acyl CoAs [FA0705]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Fatty acyl carnitines [FA0707]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Fatty acyl adenylates [FA0708]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Fatty acid estolides [FA0709]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Short fatty esters [FA0710]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        }
+                    ]
+                },
+                {
+                    "name": "Fatty amides [FA08]",
+                    "est_rt_lo_m": null,
+                    "est_rt_up_m": null,
+                    "SUB_CLASSES": [
+                        {
+                            "name": "Primary amides [FA0801]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "N-acyl amines [FA0802]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Fatty acyl homoserine lactones [FA0803]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "N-acyl ethanolamines (endocannabinoids) [FA0804]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        }
+                    ]
+                },
+                {
+                    "name": "Fatty nitriles [FA09]",
+                    "est_rt_lo_m": null,
+                    "est_rt_up_m": null
+                },
+                {
+                    "name": "Fatty ethers [FA10]",
+                    "est_rt_lo_m": null,
+                    "est_rt_up_m": null
+                },
+                {
+                    "name": "Hydrocarbons [FA11]",
+                    "est_rt_lo_m": null,
+                    "est_rt_up_m": null
+                },
+                {
+                    "name": "Oxygenated hydrocarbons [FA12]",
+                    "est_rt_lo_m": null,
+                    "est_rt_up_m": null
+                },
+                {
+                    "name": "Fatty acyl glycosides [FA13]",
+                    "est_rt_lo_m": null,
+                    "est_rt_up_m": null,
+                    "SUB_CLASSES": [
+                        {
+                            "name": "Fatty acyl glycosides of mono- and disaccharides [FA1301]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Sophorolipids [FA1302]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Rhamnolipids [FA1303]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Ascarosides [FA1304]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Glycerolipids [GL]",
+            "est_rt_lo_m": null,
+            "est_rt_up_m": null,
+            "MAIN_CLASSES": [
+                {
+                    "name": "Other Glycerolipids [GL00]",
+                    "est_rt_lo_m": null,
+                    "est_rt_up_m": null
+                },
+                {
+                    "name": "Monoradylglycerols [GL01]",
+                    "est_rt_lo_m": null,
+                    "est_rt_up_m": null,
+                    "SUB_CLASSES": [
+                        {
+                            "name": "Monoacylglycerols [GL0101]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Monoalkylglycerols [GL0102]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Mono-(1Z-alkenyl)-glycerols [GL0103]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        }
+                    ]
+                },
+                {
+                    "name": "Diradylglycerols [GL02]",
+                    "est_rt_lo_m": null,
+                    "est_rt_up_m": null,
+                    "SUB_CLASSES": [
+                        {
+                            "name": "Diacylglycerols [GL0201]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "1-alkyl,2-acylglycerols [GL0202]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Dialkylglycerols [GL0203]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "1Z-alkenylacylglycerols [GL0204]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Di-glycerol tetraethers [GL0205]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Di-glycerol tetraether glycans [GL0206]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "1-acyl,2-alkylglycerols [GL0207]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        }
+                    ]
+                },
+                {
+                    "name": "Triradylglycerols [GL03]",
+                    "est_rt_lo_m": null,
+                    "est_rt_up_m": null,
+                    "SUB_CLASSES": [
+                        {
+                            "name": "Triacylglycerols [GL0301]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Alkyldiacylglycerols [GL0302]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Estolides [GL0305]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        }
+                    ]
+                },
+                {
+                    "name": "Glycosylmonoradylglycerols [GL04]",
+                    "est_rt_lo_m": null,
+                    "est_rt_up_m": null,
+                    "SUB_CLASSES": [
+                        {
+                            "name": "Glycosylmonoacylglycerols [GL0401]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Glycosylmonoalkylglycerols [GL0402]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        }
+                    ]
+                },
+                {
+                    "name": "Glycosyldiradylglycerols [GL05]",
+                    "est_rt_lo_m": null,
+                    "est_rt_up_m": null,
+                    "SUB_CLASSES": [
+                        {
+                            "name": "Glycosyldiacylglycerols [GL0501]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Glycosylalkylacylglycerols [GL0502]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Glycosyldialkylglycerols [GL0503]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        }
+                    ]
+                },
+                {
+                    "name": "Betaine monoradylglycerols [GL06]",
+                    "est_rt_lo_m": null,
+                    "est_rt_up_m": null,
+                    "SUB_CLASSES": [
+                        {
+                            "name": "Betaine monoacylglycerols [GL0601]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        }
+                    ]
+                },
+                {
+                    "name": "Betaine diradylglycerols [GL07]",
+                    "est_rt_lo_m": null,
+                    "est_rt_up_m": null,
+                    "SUB_CLASSES": [
+                        {
+                            "name": "Betaine diacylglycerols [GL0701]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Glycerophospholipids [GP]",
+            "est_rt_lo_m": null,
+            "est_rt_up_m": null,
+            "MAIN_CLASSES": [
+                {
+                    "name": "Other Glycerophospholipids [GP00]",
+                    "est_rt_lo_m": null,
+                    "est_rt_up_m": null
+                },
+                {
+                    "name": "Glycerophosphocholines [GP01]",
+                    "est_rt_lo_m": null,
+                    "est_rt_up_m": null,
+                    "SUB_CLASSES": [
+                        {
+                            "name": "Diacylglycerophosphocholines [GP0101]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "1-alkyl,2-acylglycerophosphocholines [GP0102]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "1-(1Z-alkenyl),2-acylglycerophosphocholines [GP0103]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Dialkylglycerophosphocholines [GP0104]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Monoacylglycerophosphocholines [GP0105]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Monoalkylglycerophosphocholines [GP0106]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "1Z-alkenylglycerophosphocholines [GP0107]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "1-acyl,2-alkylglycerophosphocholines [GP0108]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        }
+                    ]
+                },
+                {
+                    "name": "Glycerophosphoethanolamines [GP02]",
+                    "est_rt_lo_m": null,
+                    "est_rt_up_m": null,
+                    "SUB_CLASSES": [
+                        {
+                            "name": "Diacylglycerophosphoethanolamines [GP0201]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "1-alkyl,2-acylglycerophosphoethanolamines [GP0202]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "1-(1Z-alkenyl),2-acylglycerophosphoethanolamines [GP0203]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Dialkylglycerophosphoethanolamines [GP0204]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Monoacylglycerophosphoethanolamines [GP0205]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Monoalkylglycerophosphoethanolamines [GP0206]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "1Z-alkenylglycerophosphoethanolamines [GP0207]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "1-acyl,2-alkylglycerophosphoethanolamines [GP0208]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        }
+                    ]
+                },
+                {
+                    "name": "Glycerophosphoserines [GP03]",
+                    "est_rt_lo_m": null,
+                    "est_rt_up_m": null,
+                    "SUB_CLASSES": [
+                        {
+                            "name": "Diacylglycerophosphoserines [GP0301]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "1-alkyl,2-acylglycerophosphoserines [GP0302]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "1-(1Z-alkenyl),2-acylglycerophosphoserines [GP0303]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Monoacylglycerophosphoserines [GP0305]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Monoalkylglycerophosphoserines [GP0306]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "1Z-alkenylglycerophosphoserines [GP0307]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        }
+                    ]
+                },
+                {
+                    "name": "Glycerophosphoglycerols [GP04]",
+                    "est_rt_lo_m": null,
+                    "est_rt_up_m": null,
+                    "SUB_CLASSES": [
+                        {
+                            "name": "Diacylglycerophosphoglycerols [GP0401]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "1-alkyl,2-acylglycerophosphoglycerols [GP0402]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "1-(1Z-alkenyl),2-acylglycerophosphoglycerols [GP0403]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Dialkylglycerophosphoglycerols [GP0404]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Monoacylglycerophosphoglycerols [GP0405]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Monoalkylglycerophosphoglycerols [GP0406]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "1Z-alkenylglycerophosphoglycerols [GP0407]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Diacylglycerophosphomonoradylglycerols [GP0409]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Monoacylglycerophosphomonoradylglycerols [GP0410]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "1-acyl,2-alkylglycerophosphoglycerols [GP0411]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        }
+                    ]
+                },
+                {
+                    "name": "Glycerophosphoglycerophosphates [GP05]",
+                    "est_rt_lo_m": null,
+                    "est_rt_up_m": null,
+                    "SUB_CLASSES": [
+                        {
+                            "name": "Diacylglycerophosphoglycerophosphates [GP0501]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Dialkylglycerophosphoglycerophosphates [GP0504]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        }
+                    ]
+                },
+                {
+                    "name": "Glycerophosphoinositols [GP06]",
+                    "est_rt_lo_m": null,
+                    "est_rt_up_m": null,
+                    "SUB_CLASSES": [
+                        {
+                            "name": "Diacylglycerophosphoinositols [GP0601]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "1-alkyl,2-acylglycerophosphoinositols [GP0602]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "1-(1Z-alkenyl),2-acylglycerophosphoinositols [GP0603]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Dialkylglycerophosphoinositols [GP0604]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Monoacylglycerophosphoinositols [GP0605]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Monoalkylglycerophosphoinositols [GP0606]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "1Z-alkenylglycerophosphoinositols [GP0607]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        }
+                    ]
+                },
+                {
+                    "name": "Glycerophosphoinositol monophosphates [GP07]",
+                    "est_rt_lo_m": null,
+                    "est_rt_up_m": null,
+                    "SUB_CLASSES": [
+                        {
+                            "name": "Diacylglycerophosphoinositol monophosphates [GP0701]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        }
+                    ]
+                },
+                {
+                    "name": "Glycerophosphoinositol bisphosphates [GP08]",
+                    "est_rt_lo_m": null,
+                    "est_rt_up_m": null,
+                    "SUB_CLASSES": [
+                        {
+                            "name": "Diacylglycerophosphoinositol bisphosphates [GP0801]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        }
+                    ]
+                },
+                {
+                    "name": "Glycerophosphoinositol trisphosphates [GP09]",
+                    "est_rt_lo_m": null,
+                    "est_rt_up_m": null,
+                    "SUB_CLASSES": [
+                        {
+                            "name": "Diacylglycerophosphoinositol trisphosphates [GP0901]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        }
+                    ]
+                },
+                {
+                    "name": "Glycerophosphates [GP10]",
+                    "est_rt_lo_m": null,
+                    "est_rt_up_m": null,
+                    "SUB_CLASSES": [
+                        {
+                            "name": "Diacylglycerophosphates [GP1001]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "1-alkyl,2-acylglycerophosphates [GP1002]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "1-(1Z-alkenyl),2-acylglycerophosphates [GP1003]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Monoacylglycerophosphates [GP1005]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Monoalkylglycerophosphates [GP1006]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "1Z-alkenylglycerophosphates [GP1007]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        }
+                    ]
+                },
+                {
+                    "name": "Glyceropyrophosphates [GP11]",
+                    "est_rt_lo_m": null,
+                    "est_rt_up_m": null,
+                    "SUB_CLASSES": [
+                        {
+                            "name": "Diacylglyceropyrophosphates [GP1101]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        }
+                    ]
+                },
+                {
+                    "name": "Glycerophosphoglycerophosphoglycerols [GP12]",
+                    "est_rt_lo_m": null,
+                    "est_rt_up_m": null,
+                    "SUB_CLASSES": [
+                        {
+                            "name": "Diacylglycerophosphoglycerophosphodiradylglycerols [GP1201]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Diacylglycerophosphoglycerophosphomonoradylglycerols [GP1202]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Monoacylglycerophosphoglycerophosphomonoradylglycerols [GP1207]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Dialkylglycerophosphoglycerophosphodiradylglycerols [GP1212]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        }
+                    ]
+                },
+                {
+                    "name": "CDP-Glycerols [GP13]",
+                    "est_rt_lo_m": null,
+                    "est_rt_up_m": null,
+                    "SUB_CLASSES": [
+                        {
+                            "name": "CDP-diacylglycerols [GP1301]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        }
+                    ]
+                },
+                {
+                    "name": "Glycosylglycerophospholipids [GP14]",
+                    "est_rt_lo_m": null,
+                    "est_rt_up_m": null,
+                    "SUB_CLASSES": [
+                        {
+                            "name": "Diacylglycosylglycerophospholipids [GP1401]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Monoacylglycosylglycerophospholipids [GP1404]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        }
+                    ]
+                },
+                {
+                    "name": "Glycerophosphoinositolglycans [GP15]",
+                    "est_rt_lo_m": null,
+                    "est_rt_up_m": null,
+                    "SUB_CLASSES": [
+                        {
+                            "name": "Diacylglycerophosphoinositolglycans [GP1501]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Monoacylglycerophosphoinositolglycans [GP1504]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Dialkylglycerophosphoinositolglycans [GP1507]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        }
+                    ]
+                },
+                {
+                    "name": "Glycerophosphonocholines [GP16]",
+                    "est_rt_lo_m": null,
+                    "est_rt_up_m": null,
+                    "SUB_CLASSES": [
+                        {
+                            "name": "Diacylglycerophosphonocholines [GP1601]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        }
+                    ]
+                },
+                {
+                    "name": "Glycerophosphonoethanolamines [GP17]",
+                    "est_rt_lo_m": null,
+                    "est_rt_up_m": null,
+                    "SUB_CLASSES": [
+                        {
+                            "name": "Diacylglycerophosphonoethanolamines [GP1701]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        }
+                    ]
+                },
+                {
+                    "name": "Di-glycerol tetraether phospholipids (caldarchaeols) [GP18]",
+                    "est_rt_lo_m": null,
+                    "est_rt_up_m": null
+                },
+                {
+                    "name": "Glycerol-nonitol tetraether phospholipids [GP19]",
+                    "est_rt_lo_m": null,
+                    "est_rt_up_m": null
+                },
+                {
+                    "name": "Oxidized glycerophospholipids [GP20]",
+                    "est_rt_lo_m": null,
+                    "est_rt_up_m": null,
+                    "SUB_CLASSES": [
+                        {
+                            "name": "Oxidized glycerophosphocholines [GP2001]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Oxidized glycerophosphoethanolamines [GP2002]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Oxidized Cardiolipins [GP2003]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Oxidized glycerophosphoserines [GP2004]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Oxidized glycerophosphoinositols [GP2005]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Oxidized glycerophosphates [GP2006]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Oxidized glycerophosphoglycerols [GP2007]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        }
+                    ]
+                },
+                {
+                    "name": "Glycerophosphoethanolamine glycans [GP21]",
+                    "est_rt_lo_m": null,
+                    "est_rt_up_m": null,
+                    "SUB_CLASSES": [
+                        {
+                            "name": "Diacylglycerophosphoethanolamine glycans [GP2101]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "1-alkyl,2-acylglycerophosphoethanolamine glycans [GP2102]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "1-(1Z-alkenyl),2-acylglycerophosphoethanolamine glycans [GP2103]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Monoacylglycerophosphoethanolamine glycans [GP2105]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        }
+                    ]
+                },
+                {
+                    "name": "Dihydroxyacetonephosphates [GP22]",
+                    "est_rt_lo_m": null,
+                    "est_rt_up_m": null,
+                    "SUB_CLASSES": [
+                        {
+                            "name": "Acyl-dihydroxyacetonephosphates [GP2201]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Alkyl-dihydroxyacetonephosphates [GP2202]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        }
+                    ]
+                },
+                {
+                    "name": "Glycerophosphoethanols [GP23]",
+                    "est_rt_lo_m": null,
+                    "est_rt_up_m": null,
+                    "SUB_CLASSES": [
+                        {
+                            "name": "Diacylglycerophosphoethanols [GP2301]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Sphingolipids [SP]",
+            "est_rt_lo_m": null,
+            "est_rt_up_m": null,
+            "MAIN_CLASSES": [
+                {
+                    "name": "Other Sphingolipids [SP00]",
+                    "est_rt_lo_m": null,
+                    "est_rt_up_m": null
+                },
+                {
+                    "name": "Sphingoid bases [SP01]",
+                    "est_rt_lo_m": null,
+                    "est_rt_up_m": null,
+                    "SUB_CLASSES": [
+                        {
+                            "name": "Sphing-4-enines (Sphingosines) [SP0101]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Sphinganines [SP0102]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "4-Hydroxysphinganines (Phytosphingosines) [SP0103]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Sphingoid base homologs and variants [SP0104]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Sphingoid base 1-phosphates [SP0105]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Lysosphingomyelins and lysoglycosphingolipids [SP0106]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "N-methylated sphingoid bases [SP0107]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Sphingoid base analogs [SP0108]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        }
+                    ]
+                },
+                {
+                    "name": "Ceramides [SP02]",
+                    "est_rt_lo_m": null,
+                    "est_rt_up_m": null,
+                    "SUB_CLASSES": [
+                        {
+                            "name": "N-acylsphingosines (ceramides) [SP0201]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "N-acylsphinganines (dihydroceramides) [SP0202]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "N-acyl-4-hydroxysphinganines (phytoceramides) [SP0203]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Acylceramides [SP0204]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Ceramide 1-phosphates [SP0205]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "1-deoxyceramides [SP0206]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "3-keto Ceramides [SP0208]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        }
+                    ]
+                },
+                {
+                    "name": "Phosphosphingolipids [SP03]",
+                    "est_rt_lo_m": null,
+                    "est_rt_up_m": null,
+                    "SUB_CLASSES": [
+                        {
+                            "name": "Ceramide phosphocholines (sphingomyelins) [SP0301]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Ceramide phosphoethanolamines [SP0302]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Ceramide phosphoinositols [SP0303]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        }
+                    ]
+                },
+                {
+                    "name": "Phosphonosphingolipids [SP04]",
+                    "est_rt_lo_m": null,
+                    "est_rt_up_m": null
+                },
+                {
+                    "name": "Neutral glycosphingolipids [SP05]",
+                    "est_rt_lo_m": null,
+                    "est_rt_up_m": null,
+                    "SUB_CLASSES": [
+                        {
+                            "name": "Other Neutral glycosphingolipids [SP0500]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Simple Glc series [SP0501]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Galalpha1-4Galbeta1-4Glc- (Globo series) [SP0502]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "GalNAcbeta1-4Galbeta1-4Glc- (Ganglio series) [SP0503]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Galbeta1-3GlcNAcbeta1-3Galbeta1-4Glc- (Lacto series) [SP0504]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Galbeta1-4GlcNAcbeta1-3Galbeta1-4Glc- (Neolacto series) [SP0505]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Galalpha1-3Galbeta1-4Glc- (Isoglobo series) [SP0506]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Manalpha1-3Manbeta1-4Glc- (Mollu series) [SP0507]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "GlcNAcbeta1-3Manbeta1-4Glc- (Arthro series) [SP0508]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Gal- (Gala series) [SP0509]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        }
+                    ]
+                },
+                {
+                    "name": "Acidic glycosphingolipids [SP06]",
+                    "est_rt_lo_m": null,
+                    "est_rt_up_m": null,
+                    "SUB_CLASSES": [
+                        {
+                            "name": "Gangliosides [SP0601]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Sulfoglycosphingolipids (sulfatides) [SP0602]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Glucuronosphingolipids [SP0603]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Phosphoglycosphingolipids [SP0604]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        }
+                    ]
+                },
+                {
+                    "name": "Basic glycosphingolipids [SP07]",
+                    "est_rt_lo_m": null,
+                    "est_rt_up_m": null
+                },
+                {
+                    "name": "Amphoteric glycosphingolipids [SP08]",
+                    "est_rt_lo_m": null,
+                    "est_rt_up_m": null
+                }
+            ]
+        },
+        {
+            "name": "Sterol Lipids [ST]",
+            "est_rt_lo_m": null,
+            "est_rt_up_m": null,
+            "MAIN_CLASSES": [
+                {
+                    "name": "Sterols [ST01]",
+                    "est_rt_lo_m": null,
+                    "est_rt_up_m": null,
+                    "SUB_CLASSES": [
+                        {
+                            "name": "Cholesterol and derivatives [ST0101]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Steryl esters [ST0102]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Ergosterols and C24-methyl derivatives [ST0103]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Stigmasterols and C24-ethyl derivatives [ST0104]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "C24-propyl sterols and derivatives [ST0105]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Gorgosterols and derivatives [ST0106]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Furostanols and derivatives [ST0107]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Spirostanols and derivatives [ST0108]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Furospirostanols and derivatives [ST0109]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Cycloartanols and derivatives [ST0110]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Calysterols and cyclopropyl sidechain derivatives [ST0111]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Cardanolides and derivatives [ST0112]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Bufanolides and derivatives [ST0113]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Brassinolides and derivatives [ST0114]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Solanidines and alkaloid derivatives [ST0115]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Withanolides and derivatives [ST0116]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Homo-aro-cholesterols and derivatives [ST0117]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        }
+                    ]
+                },
+                {
+                    "name": "Steroids [ST02]",
+                    "est_rt_lo_m": null,
+                    "est_rt_up_m": null,
+                    "SUB_CLASSES": [
+                        {
+                            "name": "C18 steroids (estrogens) and derivatives [ST0201]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "C19 steroids (androgens) and derivatives [ST0202]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "C21 steroids (gluco/mineralocorticoids, progestogins) and derivatives [ST0203]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        }
+                    ]
+                },
+                {
+                    "name": "Secosteroids [ST03]",
+                    "est_rt_lo_m": null,
+                    "est_rt_up_m": null,
+                    "SUB_CLASSES": [
+                        {
+                            "name": "Vitamin D2 and derivatives [ST0301]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Vitamin D3 and derivatives [ST0302]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Vitamin D4 and derivatives [ST0303]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Vitamin D5 and derivatives [ST0304]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Vitamin D6 and derivatives [ST0305]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Vitamin D7 and derivatives [ST0306]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        }
+                    ]
+                },
+                {
+                    "name": "Bile acids and derivatives [ST04]",
+                    "est_rt_lo_m": null,
+                    "est_rt_up_m": null,
+                    "SUB_CLASSES": [
+                        {
+                            "name": "C24 bile acids, alcohols, and derivatives [ST0401]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "C26 bile acids, alcohols, and derivatives [ST0402]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "C27 bile acids, alcohols, and derivatives [ST0403]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "C28 bile acids, alcohols, and derivatives [ST0404]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "C22 bile acids, alcohols, and derivatives [ST0405]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "C23 bile acids, alcohols, and derivatives [ST0406]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "C25 bile acids, alcohols, and derivatives [ST0407]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "C29 bile acids, alcohols, and derivatives [ST0408]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        }
+                    ]
+                },
+                {
+                    "name": "Steroid conjugates [ST05]",
+                    "est_rt_lo_m": null,
+                    "est_rt_up_m": null,
+                    "SUB_CLASSES": [
+                        {
+                            "name": "Glucuronides [ST0501]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Sulfates [ST0502]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Glycine conjugates [ST0503]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Taurine conjugates [ST0504]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Other Steroid conjugates [ST0505]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Prenol Lipids [PR]",
+            "est_rt_lo_m": null,
+            "est_rt_up_m": null,
+            "MAIN_CLASSES": [
+                {
+                    "name": "Isoprenoids [PR01]",
+                    "est_rt_lo_m": null,
+                    "est_rt_up_m": null,
+                    "SUB_CLASSES": [
+                        {
+                            "name": "C5 isoprenoids (hemiterpenes) [PR0101]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "C10 isoprenoids (monoterpenes) [PR0102]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "C15 isoprenoids (sesquiterpenes) [PR0103]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "C20 isoprenoids (diterpenes) [PR0104]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "C25 isoprenoids (sesterterpenes) [PR0105]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "C30 isoprenoids (triterpenes) [PR0106]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "C40 isoprenoids (tetraterpenes) [PR0107]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Polyterpenes [PR0108]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Retinoids [PR0109]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        }
+                    ]
+                },
+                {
+                    "name": "Quinones and hydroquinones [PR02]",
+                    "est_rt_lo_m": null,
+                    "est_rt_up_m": null,
+                    "SUB_CLASSES": [
+                        {
+                            "name": "Ubiquinones [PR0201]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Vitamin E [PR0202]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Vitamin K [PR0203]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        }
+                    ]
+                },
+                {
+                    "name": "Polyprenols [PR03]",
+                    "est_rt_lo_m": null,
+                    "est_rt_up_m": null,
+                    "SUB_CLASSES": [
+                        {
+                            "name": "Bactoprenols [PR0301]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Bactoprenol monophosphates [PR0302]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Bactoprenol diphosphates [PR0303]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Phytoprenols [PR0304]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Dolichols [PR0307]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Dolichol monophosphates [PR0308]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Dolichol diphosphates [PR0309]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        }
+                    ]
+                },
+                {
+                    "name": "Hopanoids [PR04]",
+                    "est_rt_lo_m": null,
+                    "est_rt_up_m": null
+                }
+            ]
+        },
+        {
+            "name": "Saccharolipids [SL]",
+            "est_rt_lo_m": null,
+            "est_rt_up_m": null,
+            "MAIN_CLASSES": [
+                {
+                    "name": "Acylaminosugars [SL01]",
+                    "est_rt_lo_m": null,
+                    "est_rt_up_m": null,
+                    "SUB_CLASSES": [
+                        {
+                            "name": "Monoacylaminosugars [SL0101]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Diacylaminosugars [SL0102]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Tetraacylaminosugars [SL0104]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Pentaacylaminosugars [SL0105]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Hexaacylaminosugars [SL0106]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Heptaacylaminosugars [SL0107]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        }
+                    ]
+                },
+                {
+                    "name": "Acylaminosugar glycans [SL02]",
+                    "est_rt_lo_m": null,
+                    "est_rt_up_m": null
+                },
+                {
+                    "name": "Acyltrehaloses [SL03]",
+                    "est_rt_lo_m": null,
+                    "est_rt_up_m": null
+                },
+                {
+                    "name": "Other acyl sugars [SL05]",
+                    "est_rt_lo_m": null,
+                    "est_rt_up_m": null
+                }
+            ]
+        },
+        {
+            "name": "Polyketides [PK]",
+            "est_rt_lo_m": null,
+            "est_rt_up_m": null,
+            "MAIN_CLASSES": [
+                {
+                    "name": "Other Polyketides [PK00]",
+                    "est_rt_lo_m": null,
+                    "est_rt_up_m": null
+                },
+                {
+                    "name": "Linear polyketides [PK01]",
+                    "est_rt_lo_m": null,
+                    "est_rt_up_m": null
+                },
+                {
+                    "name": "Halogenated acetogenins [PK02]",
+                    "est_rt_lo_m": null,
+                    "est_rt_up_m": null
+                },
+                {
+                    "name": "Annonaceae acetogenins [PK03]",
+                    "est_rt_lo_m": null,
+                    "est_rt_up_m": null
+                },
+                {
+                    "name": "Macrolides and lactone polyketides [PK04]",
+                    "est_rt_lo_m": null,
+                    "est_rt_up_m": null
+                },
+                {
+                    "name": "Ansamycins and related polyketides [PK05]",
+                    "est_rt_lo_m": null,
+                    "est_rt_up_m": null
+                },
+                {
+                    "name": "Polyenes [PK06]",
+                    "est_rt_lo_m": null,
+                    "est_rt_up_m": null
+                },
+                {
+                    "name": "Linear tetracyclines [PK07]",
+                    "est_rt_lo_m": null,
+                    "est_rt_up_m": null
+                },
+                {
+                    "name": "Angucyclines [PK08]",
+                    "est_rt_lo_m": null,
+                    "est_rt_up_m": null
+                },
+                {
+                    "name": "Polyether antibiotics [PK09]",
+                    "est_rt_lo_m": null,
+                    "est_rt_up_m": null
+                },
+                {
+                    "name": "Aflatoxins and related substances [PK10]",
+                    "est_rt_lo_m": null,
+                    "est_rt_up_m": null
+                },
+                {
+                    "name": "Cytochalasins [PK11]",
+                    "est_rt_lo_m": null,
+                    "est_rt_up_m": null
+                },
+                {
+                    "name": "Flavonoids [PK12]",
+                    "est_rt_lo_m": null,
+                    "est_rt_up_m": null,
+                    "SUB_CLASSES": [
+                        {
+                            "name": "Anthocyanidins [PK1201]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Flavans, Flavanols and Leucoanthocyanidins [PK1202]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Proanthocyanidins [PK1203]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Biflavonoids and polyflavonoids [PK1204]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Isoflavonoids [PK1205]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Rotenoid flavonoids [PK1206]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Pterocarpans [PK1207]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Isoflavans [PK1208]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Coumestan flavonoids [PK1209]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Neoflavonoids [PK1210]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Flavones and Flavonols [PK1211]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Chalcones and dihydrochalcones [PK1212]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Aurone flavonoids [PK1213]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Flavanones [PK1214]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Dihydroflavonols [PK1215]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Other Flavonoids [PK1216]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        }
+                    ]
+                },
+                {
+                    "name": "Aromatic polyketides [PK13]",
+                    "est_rt_lo_m": null,
+                    "est_rt_up_m": null,
+                    "SUB_CLASSES": [
+                        {
+                            "name": "Monocyclic aromatic polyketides [PK1301]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Naphthalenes and naphthoquinones [PK1302]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Benzoisochromanquinones [PK1303]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Anthracenes and phenanthrenes [PK1304]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Anthracyclinones [PK1305]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Dibenzofurans, griseofulvins, dibenzopyrans and xanthones [PK1306]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Diphenylmethanes, acylphloroglucinols and benzophenones [PK1307]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Depsides and depsidones [PK1308]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Diphenyl ethers, biphenyls, dibenzyls and stilbenes [PK1309]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Benzofuranoids [PK1310]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Benzopyranoids [PK1311]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Other aromatic polyketides [PK1312]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        }
+                    ]
+                },
+                {
+                    "name": "Non-ribosomal peptide/polyketide hybrids [PK14]",
+                    "est_rt_lo_m": null,
+                    "est_rt_up_m": null
+                },
+                {
+                    "name": "Phenolic lipids [PK15]",
+                    "est_rt_lo_m": null,
+                    "est_rt_up_m": null,
+                    "SUB_CLASSES": [
+                        {
+                            "name": "Alkyl phenols and derivatives [PK1501]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Alkyl catechols and derivatives [PK1502]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Alkyl resorcinols and derivatives [PK1503]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Anacardic acids and derivatives [PK1504]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        },
+                        {
+                            "name": "Alkyl hydroquinones and derivatives [PK1505]",
+                            "est_rt_lo_m": null,
+                            "est_rt_up_m": null
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
