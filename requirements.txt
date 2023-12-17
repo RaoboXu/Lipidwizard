@@ -1,0 +1,7 @@
+PySide6
+openpyxl
+numpy
+matplotlib
+requests
+brain-isotopic-distribution
+scipy
