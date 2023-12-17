@@ -2,7 +2,7 @@
 
 This project has dependencies
 
-* python3.9
+* python 3.9.0
 * PySide6
 * openpyxl
 * numpy
@@ -11,10 +11,40 @@ This project has dependencies
 * brain-isotopic-distribution
 * scipy
 
-Python could be install from https://www.python.org/downloads
+You must have Python installed before downloading and using this software, Python could be install from [https://www.python.org/downloads/release/python-390/](https://www.python.org/downloads/release/python-390/)
+## Run from binary distribution
+Download the zipped binary distributions corresponding to the OS Platform that the users are using from the [https://github.com/RaoboXu/Lipidwizard/releases/](https://github.com/RaoboXu/Lipidwizard/releases/)
 
-After python was installed, using the pip to install the required modules. For example: "pip install PySide6"
+Unzip the downloaded package
 
-The default database file path and some other configurations are configured in 'config.json' 
+Launch the softeware
+* For Windows users, double click the LipidWizard.exe
+* For Ubuntu Users, double click the LipidWizard
+* For Apple OSX Users, you must open the Terminal and change the current directory to the unzipped folder. Then, run the following command to launch the software.
+  ```bash
+  ./LipidWizard
+  ```
 
-GUI Program can startup by using "python3 gui.py" or by executing the shell file "startup.sh"(macos)/"startup.bat"(windows)
+## Run from Source Code
+After python was installed, douwnload the sourcecode
+Call the the following commands to configure and run the software from the source code.
+Run the following commands to download all the dependecies
+For linux and osx users:
+```bash
+pip install -r requirements.txt
+```
+For Windows users:
+```bash
+python -m pip install -r requirements.txt
+```
+Run the following commands to launch the software
+For OSX users and Linux users:
+```bash
+python3 gui.py
+```
+For Windows users:
+```bash
+python gui.py
+```
+
+See the file "User Manual for Lipid Wizard.pdf" for the using guidance.
