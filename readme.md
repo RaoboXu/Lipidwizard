@@ -1,4 +1,5 @@
-# README
+# Lipid Wizard
+![ ](icon.png)
 
 This project has dependencies
 
