@@ -13,7 +13,7 @@ This project has dependencies
 * scipy
 
 You must have Python installed before downloading and using this software, Python could be install from [https://www.python.org/downloads/release/python-390/](https://www.python.org/downloads/release/python-390/)
-## Run from binary distribution
+## Run from Binary Distributions
 Download the zipped binary distributions corresponding to the OS Platform that the users are using from the [https://github.com/RaoboXu/Lipidwizard/releases/](https://github.com/RaoboXu/Lipidwizard/releases/)
 
 Unzip the downloaded package
