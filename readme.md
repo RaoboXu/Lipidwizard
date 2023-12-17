@@ -47,4 +47,4 @@ For Windows users:
 python gui.py
 ```
 
-See the file "User Manual for Lipid Wizard.pdf" for the using guidance.
+See the file [User Manual for Lipid Wizard.pdf](https://github.com/RaoboXu/Lipidwizard/blob/main/User%20Manual%20for%20Lipid%20Wizard.pdf) for the using guidance.
