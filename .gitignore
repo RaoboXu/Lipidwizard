@@ -19,3 +19,6 @@ lib/
 share/
 include/
 dist/
+data/structures.sdf
+data/database.csv
+data/database.xlsx
