@@ -272,10 +272,3 @@ class ResultNode(QStandardItem):
         else:
             return None
         
-
-
-
-
-
-
- 

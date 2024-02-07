@@ -11,8 +11,6 @@ class ECNWideget(QWidget):
         self.tabs = QTabWidget(self)
         for name in ecn_profiles.keys():
             for profile in ecn_profiles[name]:
-                chart_view = QChartView(self.tabs)
-                chart = QChart()
                 line_series = QLineSeries()
                 line_ci_l = QLineSeries()
                 line_ci_l.hide()
@@ -22,7 +20,8 @@ class ECNWideget(QWidget):
                 line_pi_l.hide()
                 line_pi_u = QLineSeries()
                 line_pi_u.hide()
-
+                chart_view = QChartView(self.tabs)
+                chart = QChart()
                 line_series.setName("Predicted retention time")
                 scatter_series = QScatterSeries()
                 scatter_series.setName("Original data")
@@ -111,14 +110,14 @@ class ECNWideget(QWidget):
                 x_axis.setRange(x_min,x_max)
 
                 tc=x_max-x_min
-                if tc > 10:
+                while tc > 10:
                     tc/=2
                 x_axis.setTickCount(2*tc+1)
                 x_axis.setLabelFormat("%.1f")
 
                 y_axis.setRange(y_min,y_max)
                 tc=y_max-y_min
-                if tc > 10:
+                while tc > 10:
                     tc/=2
                 y_axis.setTickCount(2*tc+1) 
                 y_axis.setLabelFormat("%.1f")

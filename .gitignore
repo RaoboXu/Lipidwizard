@@ -22,3 +22,4 @@ dist/
 data/structures.sdf
 data/database.csv
 data/database.xlsx
+*.spec

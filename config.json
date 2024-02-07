@@ -9,7 +9,7 @@
     "E_MASS": 0.000549,
     "ECN_K_RANGE": [
         1.0,
-        5.0,
+        3.0,
         0.01
     ],
     "DatabaseColumnTitles": [
@@ -35,6 +35,18 @@
         "PLANTFA_ID",
         "SWISSLIPIDS_ID"
     ],
+    "XCMS_PROPERTIES": [
+        "mzmed",
+        "mzmin",
+        "mzmax",
+        "rtmed",
+        "rtmin",
+        "rtmax",
+        "npeaks",
+        "test_files",
+        "mean",
+        "maxint"
+    ],
     "IONS": [
         "Neutral",
         "[M-H]-",
@@ -54,8 +66,7 @@
         "[M+2Na-H]+",
         "[M-2H]2-",
         "[M+2H]2+",
-        "[M+2Na]2+",
-        "[M-3H]3-"
+        "[M+2Na]2+"
     ],
     "ElementTable": {
         "H": "1.007825",
@@ -218,9 +229,6 @@
         "[M+2Na]2+": {
             "Na": 2
         },
-        "[M-3H]3-": {
-            "H": -3
-        },
         "Neutral": {}
     },
     "ION_CHARGE": {
@@ -242,8 +250,7 @@
         "[M+2Na-H]+": 1,
         "[M-2H]2-": -2,
         "[M+2H]2+": 2,
-        "[M+2Na]2+": 2,
-        "[M-3H]3-": -3
+        "[M+2Na]2+": 2
     },
     "C_ISO_DIFF": 1.003355,
     "ISOTOPIC_NUM": 4,
@@ -457,6 +464,7 @@
         "Glycerophospholipids [GP].Glycerophosphoserines [GP03].Diacylglycerophosphoserines [GP0301]",
         "Glycerophospholipids [GP].Glycerophosphoserines [GP03].1-alkyl,2-acylglycerophosphoserines [GP0302]",
         "Glycerophospholipids [GP].Glycerophosphoserines [GP03].1-(1Z-alkenyl),2-acylglycerophosphoserines [GP0303]",
+        "Glycerophospholipids [GP].Glycerophosphoserines [GP03].Dialkylglycerophosphoserines [GP0304]",
         "Glycerophospholipids [GP].Glycerophosphoserines [GP03].Monoacylglycerophosphoserines [GP0305]",
         "Glycerophospholipids [GP].Glycerophosphoserines [GP03].Monoalkylglycerophosphoserines [GP0306]",
         "Glycerophospholipids [GP].Glycerophosphoserines [GP03].1Z-alkenylglycerophosphoserines [GP0307]",
@@ -485,6 +493,7 @@
         "Glycerophospholipids [GP].Glycerophosphates [GP10].Diacylglycerophosphates [GP1001]",
         "Glycerophospholipids [GP].Glycerophosphates [GP10].1-alkyl,2-acylglycerophosphates [GP1002]",
         "Glycerophospholipids [GP].Glycerophosphates [GP10].1-(1Z-alkenyl),2-acylglycerophosphates [GP1003]",
+        "Glycerophospholipids [GP].Glycerophosphates [GP10].Dialkylglycerophosphates [GP1004]",
         "Glycerophospholipids [GP].Glycerophosphates [GP10].Monoacylglycerophosphates [GP1005]",
         "Glycerophospholipids [GP].Glycerophosphates [GP10].Monoalkylglycerophosphates [GP1006]",
         "Glycerophospholipids [GP].Glycerophosphates [GP10].1Z-alkenylglycerophosphates [GP1007]",
@@ -494,6 +503,7 @@
         "Glycerophospholipids [GP].Glycerophosphoglycerophosphoglycerols [GP12].Monoacylglycerophosphoglycerophosphomonoradylglycerols [GP1207]",
         "Glycerophospholipids [GP].Glycerophosphoglycerophosphoglycerols [GP12].Dialkylglycerophosphoglycerophosphodiradylglycerols [GP1212]",
         "Glycerophospholipids [GP].CDP-Glycerols [GP13].CDP-diacylglycerols [GP1301]",
+        "Glycerophospholipids [GP].CDP-Glycerols [GP13].CDP-Dialkylglycerols [GP1304]",
         "Glycerophospholipids [GP].Glycosylglycerophospholipids [GP14].Diacylglycosylglycerophospholipids [GP1401]",
         "Glycerophospholipids [GP].Glycosylglycerophospholipids [GP14].Monoacylglycosylglycerophospholipids [GP1404]",
         "Glycerophospholipids [GP].Glycerophosphoinositolglycans [GP15].Diacylglycerophosphoinositolglycans [GP1501]",
@@ -508,8 +518,8 @@
         "Glycerophospholipids [GP].Oxidized glycerophospholipids [GP20].Oxidized Cardiolipins [GP2003]",
         "Glycerophospholipids [GP].Oxidized glycerophospholipids [GP20].Oxidized glycerophosphoserines [GP2004]",
         "Glycerophospholipids [GP].Oxidized glycerophospholipids [GP20].Oxidized glycerophosphoinositols [GP2005]",
-        "Glycerophospholipids [GP].Oxidized glycerophospholipids [GP20].Oxidized glycerophosphates [GP2006]",
-        "Glycerophospholipids [GP].Oxidized glycerophospholipids [GP20].Oxidized glycerophosphoglycerols [GP2007]",
+        "Glycerophospholipids [GP].Oxidized glycerophospholipids [GP20].Oxidized glycerophosphoglycerols [GP2006]",
+        "Glycerophospholipids [GP].Oxidized glycerophospholipids [GP20].Oxidized glycerophosphates [GP2007]",
         "Glycerophospholipids [GP].Glycerophosphoethanolamine glycans [GP21].Diacylglycerophosphoethanolamine glycans [GP2101]",
         "Glycerophospholipids [GP].Glycerophosphoethanolamine glycans [GP21].1-alkyl,2-acylglycerophosphoethanolamine glycans [GP2102]",
         "Glycerophospholipids [GP].Glycerophosphoethanolamine glycans [GP21].1-(1Z-alkenyl),2-acylglycerophosphoethanolamine glycans [GP2103]",

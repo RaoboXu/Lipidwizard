@@ -81,10 +81,8 @@ def SplitTable(source: str, targetFolder='./'):
             return
         head = data.pop(0)
         print('row amount:\t'+str(len(data)))
-        # property_amount = len(config.PeaksOriginalColumnTitles)
-        # sample_amount = len(head)-property_amount
-        property_amount = head.index(None)
-        sample_amount = len(head)-property_amount - 1
+        property_amount = len(config.XCMS_PROPERTIES)
+        sample_amount = len(head)-property_amount
         data_row_num = len(data)
         print('sample amount:\t'+str(sample_amount))
 
@@ -117,7 +115,7 @@ def SplitTable(source: str, targetFolder='./'):
             rtmax_data.append(row[index_rtmax])
             for index_sample in range(sample_amount):
                 intensity_data[index_sample].append(
-                    safe_cast(row[property_amount+index_sample + 1], float, 0.0))
+                    safe_cast(row[property_amount+index_sample], float, 0.0))
 
         # Normalize intensity
         print('Normalize intensity data')
@@ -156,9 +154,9 @@ def SplitTable(source: str, targetFolder='./'):
                 data_row.append(rtmin_data[i])
                 data_row.append(rtmax_data[i])
                 data.append(data_row)
-            csvh.SaveDataCSV(targetFolder+'/'+head[property_amount+i_s+1] +
+            csvh.SaveDataCSV(targetFolder+'/'+head[property_amount+i_s] +
                          '_peak_list.csv', data, config.PeaksFinalColumnsTitles)
-            print(str(head[property_amount+i_s+1])+'_peak_list.csv done!')
+            print(str(head[property_amount+i_s])+'_peak_list.csv done!')
     else:
         print('file: '+str(source)+'not exist')
 
@@ -267,6 +265,50 @@ def ExtractClusters(peaks: List[Peak], var: float = 5e-4, time_window=0.01) -> L
                     j -= 1
                 cluster.append(peaks.pop(j))
                 j -= 1
+            j += 1
+        if matched is True:
+            cluster.sort(key=lambda peak: peak.mz)
+            results.append(cluster)
+        i += 1
+    return results
+
+def ExtractClustersWithCharge2(peaks: List[Peak], var: float = 5e-4, time_window=0.01) -> List[List[Peak]]:
+    results: List[List[Peak]] = list()
+    half_diff = config.C_ISO_DIFF/2.0
+    peaks.sort(key=lambda peak: peak.mz)
+    i = 0
+    while i < len(peaks)-1:
+        mz = peaks[i].mz
+        rt = peaks[i].retention_time
+        matched = False
+        cluster: List[Peak] = list()
+        j = i+1
+        while j < len(peaks):
+            _mz = peaks[j].mz
+            _rt = peaks[j].retention_time
+            if _mz > mz+config.C_ISO_DIFF+var:
+                break
+            if math.isclose(mz+half_diff, _mz, abs_tol=var) and math.isclose(rt, _rt, abs_tol=time_window):
+                if not matched:
+                    cluster.append(peaks.pop(i))
+                    matched = True
+                    i -= 1
+                    j -= 1
+                cluster.append(peaks.pop(j))
+                j -= 1
+                mz = _mz
+                rt = _rt
+            elif math.isclose(mz+config.C_ISO_DIFF, _mz, abs_tol=var) and math.isclose(rt, _rt, abs_tol=time_window):
+                if not matched:
+                    cluster.append(peaks.pop(i))
+                    matched = True
+                    i -= 1
+                    j -= 1
+                cluster.append(Peak(mz+half_diff, 0, rt, 0,mz+half_diff, mz+half_diff, rt, rt))
+                cluster.append(peaks.pop(j))
+                j -= 1
+                mz = _mz
+                rt = _rt
             j += 1
         if matched is True:
             cluster.sort(key=lambda peak: peak.mz)

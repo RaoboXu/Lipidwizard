@@ -19,7 +19,7 @@ def rel_delta(a: float, theory: float):
     return (a-theory) / theory
 
 
-def SearchIsotopeByM0(m0: float, target: List[IsotopicVariants], var=1e-6) -> List[IsotopicVariants]:
+def SearchIsotopeByM0(m0: float, target: List[IsotopicVariants], var=1e-6, charges:list[int]=[]) -> List[IsotopicVariants]:
     result: List[IsotopicVariants] = list()
     end = len(target)
     low = 0
@@ -36,7 +36,10 @@ def SearchIsotopeByM0(m0: float, target: List[IsotopicVariants], var=1e-6) -> Li
         elif delta > var:
             low = mid+1
         else:
-            result.append(target[mid])
+            if len(charges) == 0:
+                result.append(target[mid])
+            elif config.ION_CHARGE[target[mid].ION] in charges:
+                result.append(target[mid])
             # find all neighbors which meet the condition
             # forward search
             i = mid+1
@@ -46,7 +49,10 @@ def SearchIsotopeByM0(m0: float, target: List[IsotopicVariants], var=1e-6) -> Li
                 if mass > 0:
                     delta = rel_delta(m0, mass)
                 if abs(delta) < var:
-                    result.append(target[i])
+                    if len(charges) == 0:
+                        result.append(target[i])
+                    elif config.ION_CHARGE[target[i].ION] in charges:
+                        result.append(target[i])
                     i += 1
                 else:
                     break
@@ -58,7 +64,10 @@ def SearchIsotopeByM0(m0: float, target: List[IsotopicVariants], var=1e-6) -> Li
                 if mass > 0:
                     delta = rel_delta(m0, mass)
                 if abs(delta) < var:
-                    result.append(target[i])
+                    if len(charges) == 0:
+                        result.append(target[i])
+                    elif config.ION_CHARGE[target[i].ION] in charges:
+                        result.append(target[i])
                     i -= 1
                 else:
                     break
@@ -68,19 +77,30 @@ def SearchIsotopeByM0(m0: float, target: List[IsotopicVariants], var=1e-6) -> Li
 
 def AverageIsotopic(isotopeList: List[IsotopicVariants]):
     isoNum = len(isotopeList)
-    ri_list = [0.0] * config.ISOTOPIC_NUM
+    peakNum = isotopeList[0].peakNum
+    ri_list = [0.0] * peakNum
     m0 = 0.0
+    ion = isotopeList[0].ION
     for iso in isotopeList:
         m0 += float(iso.M0)
-        for i in range(config.ISOTOPIC_NUM):
+        for i in range(peakNum):
             ri_list[i] += iso.relIntensityList[i]
     ri_list = Normalize(ri_list)
     m0 = m0 / isoNum
-    return IsotopicVariants(m0=m0, relIntensityList=ri_list)
+    return IsotopicVariants(ion=ion,m0=m0, relIntensityList=ri_list)
 
 
-def isotopic_var(elements: dict[str, int], npeaks, charge=0) -> IsotopicVariants:
-    peaks = brainpy.isotopic_variants(elements, npeaks, charge)
+def cal_isotopic_var(elements: dict[str, int], npeaks, charge=0) -> IsotopicVariants:
+    if elements.__contains__('H'):
+        elements['H'] -= charge
+    peaks = list(brainpy.isotopic_variants(elements, npeaks, charge))
+    real_peak_num = len(peaks)
+    if real_peak_num < 2:
+        return None
+    del_mz = peaks[1].mz - peaks[0].mz
+    # extend the peaks list with zero peaks to the length of npeaks
+    while len(peaks) < npeaks:
+        peaks.append(brainpy.Peak(peaks[-1].mz + del_mz, 0, charge))
     mz_list = list()
     abundance_list = list()
     for p in peaks:
@@ -101,24 +121,6 @@ def SaveAllIsotopicProfiles(isotopic_vars: List[IsotopicVariants], target: str):
         data.append(data_raw)
     csvh.SaveDataCSV(target, data)
 
-
-def GetIsotopicProfiles(molecules: List[Molecule], ions: List[str]) -> List[IsotopicVariants]:
-    result = list()
-    for mol in molecules:
-        for ion in ions:
-            # iso_var = isotopic_var(mol.getElements(
-            #     withIon=True, ion=ion), npeaks=5, charge=config.ION_CHARGE[ion])
-            iso_var = isotopic_var(mol.getElements(
-                withIon=True, ion=ion), npeaks=config.ISOTOPIC_NUM, charge=0)
-            iso_var.LM_ID = mol.getValue('LM_ID')
-            iso_var.ION = ion
-            iso_var.M0 = mol.getValue(ion)
-            iso_var.mol = mol
-            result.append(iso_var)
-    result.sort(key=lambda x: float(x.M0))
-    return result
-
-
 def CalculateIsotopicProfiles(database: list[Molecule], ions: list[str]) -> List[IsotopicVariants]:
     print("Calculating Isotopic variants ...")
     i = 0.
@@ -126,8 +128,30 @@ def CalculateIsotopicProfiles(database: list[Molecule], ions: list[str]) -> List
     result: list[IsotopicVariants] = list()
     for mol in database:
         for ion in ions:
-            var = isotopic_var(mol.getElements(
+            var = cal_isotopic_var(mol.getElements(
                 withIon=True, ion=ion), npeaks=config.ISOTOPIC_NUM, charge=0)
+            var.LM_ID = mol.getValue('LM_ID')
+            var.ION = ion
+            var.M0 = float(mol.getValue(ion))
+            var.mol = mol
+            result.append(var)
+        i += 1
+        print('\r{:.2f}%'.format((i/n)*100), end=' ')
+    print("\nCalculating Isotopic variants SUCCESS! ")
+    return result
+
+def CalculateIsotopicProfilesWithCharge2(database: list[Molecule], ions: list[str]) -> List[IsotopicVariants]:
+    print("Calculating Isotopic variants ...")
+    i = 0.
+    n = len(database)
+    result: list[IsotopicVariants] = list()
+    for mol in database:
+        for ion in ions:
+            charges = config.ION_CHARGE[ion]
+            var = cal_isotopic_var(mol.getElements(
+                withIon=True, ion=ion), npeaks=config.ISOTOPIC_NUM*2, charge=charges)
+            if var is None:
+                continue
             var.LM_ID = mol.getValue('LM_ID')
             var.ION = ion
             var.M0 = float(mol.getValue(ion))
@@ -171,67 +195,119 @@ def SearchByID(id: str, database: list[Molecule]):
             return database[mid]
     return None
 
-def ClusterMatch(cluster: List[Peak], profiles: List[IsotopicVariants], database: list[Molecule], var=1e-6, min_int_abs=0.0, min_it_rel=0.0) -> List[MatchResult]:
-    result: list[MatchResult] = []
-    cluster_size = len(cluster)
-    mat_size = max(cluster_size, config.ISOTOPIC_NUM)
-    M = np.zeros((mat_size, mat_size))
-    A = [peak.intensity for peak in cluster]
-    if len(A) < mat_size:
-        A.extend([0.0]*(mat_size-len(A)))
-    A = np.array(A)
-
-    search_results = []
-    candidate: list[list[IsotopicVariants]] = []
-    for i in range(mat_size):
-        if i >= cluster_size:
-            search_results.append([0.0]*mat_size)
-            candidate.append([])
+def classify_iso_by_charge(iso_list: List[IsotopicVariants]) -> List[list[IsotopicVariants]]:
+    result: List[list[IsotopicVariants]] = []
+    for iso in iso_list:
+        if iso.ION not in config.ION_CHARGE.keys():
             continue
+        charge = abs(config.ION_CHARGE[iso.ION])
+        while len(result) < charge+1:
+            result.append([])
+        result[charge].append(iso)
+    return result
+
+def unify_iso_profile(iso:IsotopicVariants) -> IsotopicVariants:
+    # insert zero between two peaks if charges is 0 or 1 and make the profile length equal to ISOTOPIC_NUM*2
+    # get the charge of the ion
+    charge = abs(config.ION_CHARGE[iso.ION])
+    peak_num = config.ISOTOPIC_NUM*2
+    abundance_list = [0.0]*peak_num
+    rel_intensity_list = [0.0]*peak_num
+    if charge == 0 or charge == 1:
+        for i in range(config.ISOTOPIC_NUM):
+            abundance_list[i*2] = iso.abundanceList[i]
+            rel_intensity_list[i*2] = iso.relIntensityList[i]
+    if charge == 2:
+        for i in range(iso.peakNum):
+            abundance_list[i] = iso.abundanceList[i]
+            rel_intensity_list[i] = iso.relIntensityList[i]
+    return IsotopicVariants(lm_id =iso.LM_ID, ion=iso.ION,m0=iso.M0, mz_list= iso.mz_list,abundance_list=abundance_list,relIntensityList=rel_intensity_list,mol=iso.mol)
+
+def deconv(cluster, profiles_a, profiles_b):
+    N = len(cluster)
+    M = len(profiles_a[0])
+
+    # Construct the coefficient matrix
+    coef_matrix_A = np.zeros((N, N))
+    coef_matrix_B = np.zeros((N, N))
+    for i in range(N):
+        for j in range(i, min(M, N-i)):
+            coef_matrix_A[i, j] = profiles_a[i, j-i]
+            coef_matrix_B[i, j] = profiles_b[i, j-i]
+    coef_matrix = np.concatenate((coef_matrix_A.T, coef_matrix_B.T), axis=1)
+
+    # Vectorize A
+    A = np.array(cluster)
+    # A = A.T
+    x_y, err = nnls(coef_matrix,A)
+    # Split the solution into x and y
+    x = x_y[:N]
+    y = x_y[N:]
+    
+    return x, y
+
+def ClusterMatchWithCharge2(cluster: List[Peak], profiles: List[IsotopicVariants], database: list[Molecule], var=1e-6, min_int_abs=0.0, min_it_rel=0.0) -> List[MatchResult]:
+    result: list[MatchResult] = []
+    A = [peak.intensity for peak in cluster]
+    cluster_size = len(cluster)
+
+    profile_resolution = config.ISOTOPIC_NUM*2
+
+    profiles_charge01 = np.zeros((cluster_size, profile_resolution))
+    profiles_charge2 = np.zeros((cluster_size, profile_resolution))
+
+    candidates_01: list[list[IsotopicVariants]] = [[]]*cluster_size
+    candidates_2: list[list[IsotopicVariants]] = [[]]*cluster_size
+
+    for i in range(cluster_size):
         peak = cluster[i]
-        iso_all: List[IsotopicVariants] = SearchIsotopeByM0(
-                peak.mz, profiles, var=var)
-        profile = []
-        candidate_item =[]
-        for iso in iso_all:
+        if peak.intensity <= 0:
+            continue
+        iso_charge01: List[IsotopicVariants] = SearchIsotopeByM0(
+                peak.mz, profiles, var=var, charges=[-1,0,1])
+        iso_charge2: List[IsotopicVariants] = SearchIsotopeByM0(
+                peak.mz, profiles, var=var, charges=[-2,2])
+        for iso in iso_charge01:
             if params.ERTFilter and pass_ert_filter_iso(iso,peak.retention_time,ert_profile) is False:
                 continue
             if params.ECNFilter and pass_ecn_filter_iso(iso,peak.retention_time,ecn_profile,params.ECN_FILT_TYPE) is False:
                 continue
-            candidate_item.append(iso)
-        if len(candidate_item) > 0:
-            isoAvrg = AverageIsotopic(candidate_item)
-            profile.extend(isoAvrg.relIntensityList)
-            if len(profile) < mat_size:
-                profile.extend([0.0]*(mat_size-len(profile)))
-        else:
-            profile.extend([0.0]*mat_size)
-        candidate.append(candidate_item)
-        search_results.append(profile)
-
-    for i in range(mat_size):
-        for j in range(cluster_size):
-            M[j,i] = search_results[j][j-i]
-
-    # minimum mse estimation that makes M*X close to A
-    # X = np.linalg.lstsq(M_T, A, rcond=None)[0]
-    X = nnls(M, A)[0]
+            candidates_01[i].append(unify_iso_profile(iso))
+        for iso in iso_charge2:
+            if params.ERTFilter and pass_ert_filter_iso(iso,peak.retention_time,ert_profile) is False:
+                continue
+            if params.ECNFilter and pass_ecn_filter_iso(iso,peak.retention_time,ecn_profile,params.ECN_FILT_TYPE) is False:
+                continue
+            candidates_2[i].append(unify_iso_profile(iso))
+    
+    for i in range(cluster_size):
+        if len(candidates_01[i]) > 0:
+            avg = AverageIsotopic(candidates_01[i])
+            for j in range(min(len(avg.relIntensityList), profile_resolution)):
+                profiles_charge01[i,j] = avg.relIntensityList[j]
+        if len(candidates_2[i]) > 0:
+            avg = AverageIsotopic(candidates_2[i])
+            for j in range(min(len(avg.relIntensityList), profile_resolution)):
+                profiles_charge2[i,j] = avg.relIntensityList[j]
+    charge01_intensities, charge2_intensities = deconv(A, profiles_charge01, profiles_charge2)
 
     for i in range(cluster_size):
-        iso_all = candidate[i]
-        if len(iso_all) >0 and X[i] > min_int_abs and X[i] / np.max(X) > min_it_rel:
+        if charge01_intensities[i] > min_int_abs and charge01_intensities[i]  / np.max(charge01_intensities) > min_it_rel:
             peak = cluster[i]
-            peak.intensity = X[i]
-            for iso in iso_all:
+            peak.intensity = charge01_intensities[i]
+            for iso in candidates_01[i]:
                 mol: Molecule = SearchByID(
                     iso.LM_ID, database)
                 r = MatchResult(iso.ION, peak, mol)
                 result.append(r)
-
-    # calculate the mse of X*M and A
-    # mse = np.sum((np.dot(X,M) - A)**2) / row_num
-    # print("MSE: ", mse)
-
+        if charge2_intensities[i] > min_int_abs and charge2_intensities[i] / np.max(charge2_intensities) > min_it_rel:
+            peak = cluster[i]
+            peak.intensity = charge2_intensities[i]
+            for iso in candidates_2[i]:
+                mol: Molecule = SearchByID(
+                    iso.LM_ID, database)
+                r = MatchResult(iso.ION, peak, mol)
+                result.append(r)
     return result
 
 
@@ -245,7 +321,9 @@ def ClustersMatch(clusters: List[List[Peak]], isotopic_profiles: list[IsotopicVa
     matched_num = 0
     while i < len(clusters):
         cluster = clusters[i]
-        r = ClusterMatch(
+        # r = ClusterMatch(
+        #     cluster, isotopic_profiles, db, params.asmtMzVar * 1e-6, params.stripItMin, params.stripRiMinPct/100.0)
+        r = ClusterMatchWithCharge2(
             cluster, isotopic_profiles, db, params.asmtMzVar * 1e-6, params.stripItMin, params.stripRiMinPct/100.0)
         if len(r) > 0:
             res += r
@@ -258,79 +336,49 @@ def ClustersMatch(clusters: List[List[Peak]], isotopic_profiles: list[IsotopicVa
     return res
 
 
+
+
 if __name__ == '__main__':
+    cluster = [10000, 20000, 12000, 2000, 25000, 0, 42000, 0, 17000, 0, 5000, 0, 1500, 0]
+    # cluster = [10000, 20000, 12000, 2000, 25000, 0, 42000, 0, 17000]
+    cluster_size = len(cluster)
 
-    profile_resolution = 4
-    cluster_size = 5
-
-    mat_size = max(cluster_size,cluster_size)
-
-    coeffs = [10000, 0, 20000, 30000]
+    coeffs = [10000,20000, 20000, 30000]
     print("Expected coefficients:")
     print(coeffs)
     print()
 
-    profile1 = [1.0, 0.6, 0.4, 0.2]
-    profile3 = [1.0, 0.5, 0.25, 0.1]
-    profile4 = [1.0, 0.4, 0.1, 0.05]
+    profile_a0 = [1.0, 0, 0.6, 0, 0.4 , 0, 0.2 , 0]
+    profile_a2 = [1.0, 0, 0.5, 0, 0.25, 0, 0.1 , 0]
+    profile_a3 = [1.0, 0, 0.4, 0, 0.1 , 0, 0.05, 0]
 
-    profiles = []
-    for i in range(mat_size):
-        if i == 0:
-            if len(profile1) < mat_size:
-                profile1.extend([0]*(mat_size-len(profile1)))
-            profiles.append(profile1)
-            continue
-        if i == 2:
-            if len(profile3) < mat_size:
-                profile3.extend([0]*(mat_size-len(profile3)))
-            profiles.append(profile3)
-            continue
-        if i == 3:
-            if len(profile4) < mat_size:
-                profile4.extend([0]*(mat_size-len(profile4)))
-            profiles.append(profile4)
-            continue
-        profiles.append([0]*mat_size)
+    profile_b1 = [1.0, 0.3, 0.1, 0.05, 0 , 0, 0, 0]
 
-    # cluster = [10000, 6000, 24000, 42000, 17000, 5000, 1500]
-    # cluster = [10000, 6000, 24000, 42000, 17000]
-    cluster = [10000, 6000, 24000, 42000, 12000]
-    if len(cluster) < mat_size:
-        cluster.extend([0]*(mat_size-len(cluster)))
+    profile_resolution = len(profile_a0)
 
-    M = np.zeros((mat_size, mat_size))
-    for i in range(mat_size):
-        if i == 1:
-            continue
-        for j in range(i, cluster_size):
-            M[j, i] = profiles[i][j-i]
+    profiles_charge01 = np.zeros((cluster_size, profile_resolution))
+    profiles_charge2 = np.zeros((cluster_size, profile_resolution))
 
-    print("M:")
-    print(M)
+    profiles_charge01[0] = profile_a0
+    profiles_charge01[4] = profile_a2
+    profiles_charge01[6] = profile_a3
+
+    profiles_charge2[1] = profile_b1
+
+
+
+    # place_holder = [0]*8
+    # profiles_charge01 = [profile1, place_holder, place_holder, place_holder, profile3, place_holder, profile4, place_holder, place_holder, place_holder, place_holder, place_holder,place_holder, place_holder]
+    # profiles_charge01 = np.array(profiles_charge01)
+
+    # profiles_charge2 = [place_holder, profile2, place_holder, place_holder, place_holder, place_holder, place_holder, place_holder,place_holder, place_holder, place_holder, place_holder,place_holder, place_holder]
+    # profiles_charge2 = np.array(profiles_charge2)
+
+    x,y=deconv(cluster, profiles_charge01, profiles_charge2)
+    print("x:")
+    print(x)
     print()
-
-    A = cluster
-
-    print("A:")
-    print(A)
+    print("y:")
+    print(y)
     print()
-
-    X, residuals = nnls(M, np.array(A))
-    mse = residuals
-    print("Predict coefficients:")
-    print(X)
-    print()
-
-    print("MSE:")
-    print(mse)
-    print()
-
-    print("Real cluster:")
-    print(cluster)
-    print()
-
-    Y = M@X
-    print("Predict cluster:")
-    print(Y)
-    print()
+    

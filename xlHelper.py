@@ -63,7 +63,7 @@ def readXlsx(source: str, data_result: list, sheet_name="", headers: list[str] =
             data_result.append(data_row)
             i=(i+1)%1e6
             if(i>10000):
-                print('\Reading'+'.'*int(i/10000),end=' ')
+                print('\rReading'+'.'*int(i/10000),end=' ')
         workbook.close()
         print("Reading Success!")
         return 'SUCCESS'
