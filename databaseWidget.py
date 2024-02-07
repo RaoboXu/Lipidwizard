@@ -151,7 +151,7 @@ class DBWideget(QWidget, Ui_form):
         ion = m.args[col]
         if ion in config.IONS:
             elements = m.getElements(withIon=True, ion=ion)
-            result = isohelper.isotopic_var(elements, 5, 0)
+            result = isohelper.cal_isotopic_var(elements, 5, config.ION_CHARGE[ion])
             dg =IsoDistDialog(self,result,title=m.getValue("FORMULA")+ion)
             dg.setMinimumHeight(500)
             dg.setMinimumWidth(500)

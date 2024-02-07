@@ -6,16 +6,38 @@ from csvHelper import SaveDataCSV,ReadDataCSV
 
 def FilterByECN(input:list[MatchResult],ecn_filt_type:str) -> list[MatchResult]:
     result: list[MatchResult]=[]
+    log_tic = 0
+    progress = "."
     for item in input:
-       if ecn_filter.pass_ecn_filter_mr(item,ecn_filter.ecn_profile,ecn_filt_type):
+        if ecn_filter.pass_ecn_filter_mr(item,ecn_filter.ecn_profile,ecn_filt_type):
            result.append(item)
+        log_tic += 1
+        if log_tic % 3000 == 0:
+           progress += "."
+           log_tic = 0
+        if len(progress) > 16:
+            progress = "."
+        print("\r2D RT Filtering:{:16s}".format(progress), end="")
+    print()
+    print("2D RT Filtering Complete!")
     return result
 
 def FilterByERT(input:list[MatchResult]) -> list[MatchResult]:
     result: list[MatchResult]=[]
+    log_tic = 0
+    progress = "."
     for item in input:
-       if ert_filter.pass_ert_filter_mr(item,ert_filter.ert_profile):
-           result.append(item)
+        if ert_filter.pass_ert_filter_mr(item,ert_filter.ert_profile):
+            result.append(item)
+        log_tic += 1
+        if log_tic % 3000 == 0:
+           progress += "."
+           log_tic = 0
+        if len(progress) > 16:
+            progress = "."
+        print("\r1D RT Filtering:{:16s}".format(progress), end="")
+    print()
+    print("1D RT Filtering Complete!")
     return result
 
 

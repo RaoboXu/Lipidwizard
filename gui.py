@@ -19,7 +19,7 @@ from alignment import AlignedResults
 from matching import SaveMatchResultCSV, matchDatabase, ReadMatchResultsCSV, SaveMatchResultCSV
 from ecn_viewer import ECNWideget
 from postprocessing import FilterByECN, FilterByERT, CombineSimilarResults, CombineByCategory, CombineByMainClass, CombineBySubClass, CombineBySubClassPure, CombineSimilarAlignedResults
-from isotopicHelper import CalculateIsotopicProfiles
+from isotopicHelper import CalculateIsotopicProfiles, CalculateIsotopicProfilesWithCharge2
 import ecn_filter
 from resultsWidget import ResultsWidget
 import resultnode
@@ -86,7 +86,9 @@ class MatchDatabaseThread(Thread):
             self.peaks, params.asmtRiMinPct/100.0, params.asmtItMin)
 
         if params.skipIsoDeconvolution is False:
-            clusters = peakhelper.ExtractClusters(
+            # clusters = peakhelper.ExtractClusters(
+            #     peaks, var=params.ClusterVar, time_window=params.TimeWindowMin)
+            clusters = peakhelper.ExtractClustersWithCharge2(
                 peaks, var=params.ClusterVar, time_window=params.TimeWindowMin)
             peakhelper.SaveClustersCSV(
                 clusters, self.dir+"/"+self.sample_name+"_Clusters.csv")
@@ -273,6 +275,7 @@ class MainWindow(QMainWindow, Ui_form):
         grid_ions.addWidget(self.cb_pos_all, 0, 0)
         grid_ions.addWidget(self.cb_neg_all, row_p, 0)
         grid_ions.addWidget(self.cb_neu, row_p+row_n, 0)
+        self.cb_neu.setHidden(True)
 
         for row in range(row_p):
             for col in range(c):
@@ -587,7 +590,7 @@ class MainWindow(QMainWindow, Ui_form):
         dbh.db = dbh.FilterByClass(
             dbh.database, self.selectedCategories, self.selectedMainClasses)
         if params.skipIsoDeconvolution is False:
-            dbh.iso_profiles = CalculateIsotopicProfiles(dbh.db, params.Ions)
+            dbh.iso_profiles = CalculateIsotopicProfilesWithCharge2(dbh.db, params.Ions)
             dbh.iso_profiles.sort(key=lambda iso: float(iso.M0))
         # filter peaks
         print('Rows of database need to be matched: ' + str(len(dbh.db)))
@@ -625,7 +628,6 @@ class MainWindow(QMainWindow, Ui_form):
                                                "Excel Files (*.xls *.xlsx)")
         folder = os.path.dirname(filename[0])
         peakhelper.SplitTable(filename[0], folder)
-        pass
 
     def alignment_callback(self):
         global aligned_results
@@ -680,9 +682,11 @@ class MainWindow(QMainWindow, Ui_form):
         print("View matching results")
         global results_tree
         global task_finished
-        if task_finished:
+        if task_finished and results_tree is not None:
             self.resultWidget = ResultsWidget(results_tree, self.all_samples)
             self.resultWidget.showMaximized()
+        else:
+            self.statusbar.showMessage("Results not ready", 3000)
 
 
 class LoadDatabaseThread(Thread):

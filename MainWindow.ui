@@ -20,7 +20,7 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QVBoxLayout" name="verticalLayout_2" stretch="1,10,18,1,0,1,1">
+   <layout class="QVBoxLayout" name="verticalLayout_2" stretch="1,10,18,0,1,1,1">
     <property name="leftMargin">
      <number>30</number>
     </property>
@@ -271,8 +271,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>788</width>
-         <height>996</height>
+         <width>786</width>
+         <height>1062</height>
         </rect>
        </property>
        <layout class="QVBoxLayout" name="verticalLayout" stretch="1,0,3,3,4,0">
@@ -290,70 +290,6 @@
           <property name="title">
            <string>Peak Merging</string>
           </property>
-          <widget class="QLabel" name="label_rt_var_merg">
-           <property name="geometry">
-            <rect>
-             <x>340</x>
-             <y>50</y>
-             <width>181</width>
-             <height>21</height>
-            </rect>
-           </property>
-           <property name="text">
-            <string>Retention time variation (mins)</string>
-           </property>
-          </widget>
-          <widget class="QDoubleSpinBox" name="spin_mz_var_merg">
-           <property name="geometry">
-            <rect>
-             <x>170</x>
-             <y>50</y>
-             <width>141</width>
-             <height>22</height>
-            </rect>
-           </property>
-           <property name="maximum">
-            <double>100000.000000000000000</double>
-           </property>
-           <property name="singleStep">
-            <double>0.010000000000000</double>
-           </property>
-           <property name="value">
-            <double>3.000000000000000</double>
-           </property>
-          </widget>
-          <widget class="QDoubleSpinBox" name="spin_rt_var_merg">
-           <property name="geometry">
-            <rect>
-             <x>540</x>
-             <y>50</y>
-             <width>91</width>
-             <height>22</height>
-            </rect>
-           </property>
-           <property name="decimals">
-            <number>4</number>
-           </property>
-           <property name="singleStep">
-            <double>0.001000000000000</double>
-           </property>
-           <property name="value">
-            <double>0.010000000000000</double>
-           </property>
-          </widget>
-          <widget class="QLabel" name="label_mz_var_merg">
-           <property name="geometry">
-            <rect>
-             <x>20</x>
-             <y>50</y>
-             <width>131</width>
-             <height>21</height>
-            </rect>
-           </property>
-           <property name="text">
-            <string>m/z variation (ppm)</string>
-           </property>
-          </widget>
           <widget class="QCheckBox" name="cb_skip_merge">
            <property name="geometry">
             <rect>
@@ -366,6 +302,58 @@
            <property name="text">
             <string>Skip</string>
            </property>
+          </widget>
+          <widget class="QWidget" name="layoutWidget1">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>50</y>
+             <width>643</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <layout class="QHBoxLayout" name="horizontalLayout_11">
+            <item>
+             <widget class="QLabel" name="label_mz_var_merg">
+              <property name="text">
+               <string>m/z variation (ppm)</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QDoubleSpinBox" name="spin_mz_var_merg">
+              <property name="maximum">
+               <double>100000.000000000000000</double>
+              </property>
+              <property name="singleStep">
+               <double>0.010000000000000</double>
+              </property>
+              <property name="value">
+               <double>3.000000000000000</double>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_rt_var_merg">
+              <property name="text">
+               <string>Retention time variation (min)</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QDoubleSpinBox" name="spin_rt_var_merg">
+              <property name="decimals">
+               <number>4</number>
+              </property>
+              <property name="singleStep">
+               <double>0.001000000000000</double>
+              </property>
+              <property name="value">
+               <double>0.010000000000000</double>
+              </property>
+             </widget>
+            </item>
+           </layout>
           </widget>
          </widget>
         </item>
@@ -380,92 +368,6 @@
           <property name="title">
            <string>Isotope Deconvolution</string>
           </property>
-          <widget class="QLabel" name="label_rt_var_merg_2">
-           <property name="geometry">
-            <rect>
-             <x>20</x>
-             <y>90</y>
-             <width>271</width>
-             <height>21</height>
-            </rect>
-           </property>
-           <property name="text">
-            <string>Retention time variation for clustering (mins)</string>
-           </property>
-          </widget>
-          <widget class="QLabel" name="label_mz_var_merg_2">
-           <property name="geometry">
-            <rect>
-             <x>20</x>
-             <y>60</y>
-             <width>261</width>
-             <height>21</height>
-            </rect>
-           </property>
-           <property name="text">
-            <string>m/z variation for clustering</string>
-           </property>
-          </widget>
-          <widget class="QDoubleSpinBox" name="spin_cluster_time_var">
-           <property name="geometry">
-            <rect>
-             <x>300</x>
-             <y>90</y>
-             <width>91</width>
-             <height>22</height>
-            </rect>
-           </property>
-           <property name="decimals">
-            <number>4</number>
-           </property>
-           <property name="maximum">
-            <double>1.000000000000000</double>
-           </property>
-           <property name="singleStep">
-            <double>0.010000000000000</double>
-           </property>
-           <property name="value">
-            <double>0.010000000000000</double>
-           </property>
-          </widget>
-          <widget class="QDoubleSpinBox" name="spin_cluster_mz_var">
-           <property name="geometry">
-            <rect>
-             <x>300</x>
-             <y>60</y>
-             <width>91</width>
-             <height>22</height>
-            </rect>
-           </property>
-           <property name="decimals">
-            <number>6</number>
-           </property>
-           <property name="minimum">
-            <double>0.000000000000000</double>
-           </property>
-           <property name="maximum">
-            <double>1.000000000000000</double>
-           </property>
-           <property name="singleStep">
-            <double>0.000010000000000</double>
-           </property>
-           <property name="value">
-            <double>0.000500000000000</double>
-           </property>
-          </widget>
-          <widget class="QLabel" name="label_mz_var_merg_4">
-           <property name="geometry">
-            <rect>
-             <x>210</x>
-             <y>60</y>
-             <width>91</width>
-             <height>21</height>
-            </rect>
-           </property>
-           <property name="text">
-            <string>1.003355 +/-</string>
-           </property>
-          </widget>
           <widget class="QCheckBox" name="cb_skip_deconvolution">
            <property name="geometry">
             <rect>
@@ -479,69 +381,163 @@
             <string>Skip</string>
            </property>
           </widget>
-          <widget class="QDoubleSpinBox" name="sp_min_it_cluster">
+          <widget class="QWidget" name="layoutWidget2">
            <property name="geometry">
             <rect>
-             <x>500</x>
-             <y>120</y>
-             <width>121</width>
-             <height>22</height>
+             <x>20</x>
+             <y>60</y>
+             <width>501</width>
+             <height>31</height>
             </rect>
            </property>
-           <property name="decimals">
-            <number>4</number>
-           </property>
-           <property name="maximum">
-            <double>100000000.000000000000000</double>
-           </property>
-           <property name="singleStep">
-            <double>1000.000000000000000</double>
-           </property>
+           <layout class="QHBoxLayout" name="horizontalLayout_5">
+            <item>
+             <widget class="QLabel" name="label_mz_var_merg_2">
+              <property name="text">
+               <string>m/z variation for clustering</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_7">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_mz_var_merg_4">
+              <property name="text">
+               <string>1.003355 +/-</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QDoubleSpinBox" name="spin_cluster_mz_var">
+              <property name="decimals">
+               <number>6</number>
+              </property>
+              <property name="minimum">
+               <double>0.000000000000000</double>
+              </property>
+              <property name="maximum">
+               <double>1.000000000000000</double>
+              </property>
+              <property name="singleStep">
+               <double>0.000010000000000</double>
+              </property>
+              <property name="value">
+               <double>0.000500000000000</double>
+              </property>
+             </widget>
+            </item>
+           </layout>
           </widget>
-          <widget class="QLabel" name="label_ma_int_2">
+          <widget class="QWidget" name="layoutWidget3">
            <property name="geometry">
             <rect>
-             <x>300</x>
-             <y>120</y>
-             <width>151</width>
-             <height>21</height>
+             <x>20</x>
+             <y>90</y>
+             <width>501</width>
+             <height>31</height>
             </rect>
            </property>
-           <property name="text">
-            <string>Min intensity (absolute)</string>
-           </property>
+           <layout class="QHBoxLayout" name="horizontalLayout_8">
+            <item>
+             <widget class="QLabel" name="label_rt_var_merg_2">
+              <property name="text">
+               <string>Retention time variation for clustering (min)</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_8">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QDoubleSpinBox" name="spin_cluster_time_var">
+              <property name="decimals">
+               <number>4</number>
+              </property>
+              <property name="maximum">
+               <double>1.000000000000000</double>
+              </property>
+              <property name="singleStep">
+               <double>0.010000000000000</double>
+              </property>
+              <property name="value">
+               <double>0.010000000000000</double>
+              </property>
+             </widget>
+            </item>
+           </layout>
           </widget>
-          <widget class="QLabel" name="label_mr_int_2">
+          <widget class="QWidget" name="layoutWidget4">
            <property name="geometry">
             <rect>
              <x>20</x>
              <y>120</y>
-             <width>151</width>
-             <height>21</height>
+             <width>721</width>
+             <height>31</height>
             </rect>
            </property>
-           <property name="text">
-            <string>Min relative intensity (%)</string>
-           </property>
-          </widget>
-          <widget class="QDoubleSpinBox" name="sp_min_ri_cluster">
-           <property name="geometry">
-            <rect>
-             <x>180</x>
-             <y>120</y>
-             <width>111</width>
-             <height>22</height>
-            </rect>
-           </property>
-           <property name="decimals">
-            <number>6</number>
-           </property>
-           <property name="maximum">
-            <double>100.000000000000000</double>
-           </property>
-           <property name="singleStep">
-            <double>1.000000000000000</double>
-           </property>
+           <layout class="QHBoxLayout" name="horizontalLayout_9">
+            <item>
+             <widget class="QLabel" name="label_mr_int_2">
+              <property name="text">
+               <string>Min relative intensity (%)</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QDoubleSpinBox" name="sp_min_ri_cluster">
+              <property name="decimals">
+               <number>6</number>
+              </property>
+              <property name="maximum">
+               <double>100.000000000000000</double>
+              </property>
+              <property name="singleStep">
+               <double>1.000000000000000</double>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_ma_int_2">
+              <property name="text">
+               <string>Min intensity (absolute)</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QDoubleSpinBox" name="sp_min_it_cluster">
+              <property name="decimals">
+               <number>4</number>
+              </property>
+              <property name="maximum">
+               <double>100000000.000000000000000</double>
+              </property>
+              <property name="singleStep">
+               <double>1000.000000000000000</double>
+              </property>
+             </widget>
+            </item>
+           </layout>
           </widget>
          </widget>
         </item>
@@ -556,101 +552,128 @@
           <property name="title">
            <string>Criteria for Assignment</string>
           </property>
-          <widget class="QDoubleSpinBox" name="spin_mz_var">
+          <widget class="QWidget" name="layoutWidget5">
            <property name="geometry">
             <rect>
-             <x>190</x>
+             <x>20</x>
              <y>40</y>
-             <width>111</width>
-             <height>22</height>
+             <width>721</width>
+             <height>31</height>
             </rect>
            </property>
-           <property name="maximum">
-            <double>100000.000000000000000</double>
-           </property>
-           <property name="singleStep">
-            <double>0.010000000000000</double>
-           </property>
-           <property name="value">
-            <double>5.000000000000000</double>
-           </property>
+           <layout class="QHBoxLayout" name="horizontalLayout_10">
+            <item>
+             <widget class="QLabel" name="label_mz_var">
+              <property name="text">
+               <string>m/z variation (ppm)           </string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QDoubleSpinBox" name="spin_mz_var">
+              <property name="maximum">
+               <double>100000.000000000000000</double>
+              </property>
+              <property name="singleStep">
+               <double>0.010000000000000</double>
+              </property>
+              <property name="value">
+               <double>5.000000000000000</double>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_11">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
           </widget>
-          <widget class="QLabel" name="label_mz_var">
+          <widget class="QWidget" name="layoutWidget6">
            <property name="geometry">
             <rect>
-             <x>30</x>
-             <y>40</y>
-             <width>131</width>
-             <height>21</height>
-            </rect>
-           </property>
-           <property name="text">
-            <string>m/z variation (ppm)</string>
-           </property>
-          </widget>
-          <widget class="QLabel" name="label_mr_int">
-           <property name="geometry">
-            <rect>
-             <x>30</x>
+             <x>20</x>
              <y>100</y>
-             <width>151</width>
-             <height>21</height>
+             <width>730</width>
+             <height>31</height>
             </rect>
            </property>
-           <property name="text">
-            <string>Min relative intensity (%)</string>
-           </property>
-          </widget>
-          <widget class="QLabel" name="label_ma_int">
-           <property name="geometry">
-            <rect>
-             <x>310</x>
-             <y>100</y>
-             <width>151</width>
-             <height>21</height>
-            </rect>
-           </property>
-           <property name="text">
-            <string>Min intensity (absolute)</string>
-           </property>
-          </widget>
-          <widget class="QDoubleSpinBox" name="sp_min_ri">
-           <property name="geometry">
-            <rect>
-             <x>190</x>
-             <y>100</y>
-             <width>111</width>
-             <height>22</height>
-            </rect>
-           </property>
-           <property name="decimals">
-            <number>6</number>
-           </property>
-           <property name="maximum">
-            <double>100.000000000000000</double>
-           </property>
-           <property name="singleStep">
-            <double>1.000000000000000</double>
-           </property>
-          </widget>
-          <widget class="QDoubleSpinBox" name="sp_min_it">
-           <property name="geometry">
-            <rect>
-             <x>510</x>
-             <y>100</y>
-             <width>121</width>
-             <height>22</height>
-            </rect>
-           </property>
-           <property name="decimals">
-            <number>4</number>
-           </property>
-           <property name="maximum">
-            <double>100000000.000000000000000</double>
-           </property>
-           <property name="singleStep">
-            <double>1000.000000000000000</double>
-           </property>
+           <layout class="QHBoxLayout" name="horizontalLayout_12">
+            <item>
+             <widget class="QLabel" name="label_mr_int">
+              <property name="text">
+               <string>Min relative intensity (%)</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QDoubleSpinBox" name="sp_min_ri">
+              <property name="decimals">
+               <number>6</number>
+              </property>
+              <property name="maximum">
+               <double>100.000000000000000</double>
+              </property>
+              <property name="singleStep">
+               <double>1.000000000000000</double>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_10">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_ma_int">
+              <property name="text">
+               <string>Min intensity (absolute)</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QDoubleSpinBox" name="sp_min_it">
+              <property name="decimals">
+               <number>4</number>
+              </property>
+              <property name="maximum">
+               <double>100000000.000000000000000</double>
+              </property>
+              <property name="singleStep">
+               <double>1000.000000000000000</double>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_9">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
           </widget>
          </widget>
         </item>
@@ -663,7 +686,7 @@
            </size>
           </property>
           <property name="title">
-           <string>Ions</string>
+           <string>Adduct Ions</string>
           </property>
          </widget>
         </item>
@@ -708,8 +731,8 @@
                <rect>
                 <x>0</x>
                 <y>0</y>
-                <width>732</width>
-                <height>249</height>
+                <width>734</width>
+                <height>247</height>
                </rect>
               </property>
              </widget>
@@ -723,19 +746,22 @@
      </widget>
     </item>
     <item>
-     <widget class="QWidget" name="widget_4" native="true">
-      <layout class="QHBoxLayout" name="horizontalLayout_5">
+     <widget class="QGroupBox" name="groupBox">
+      <property name="title">
+       <string>Retention Time Filtering</string>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_7">
        <item>
         <widget class="QCheckBox" name="cb_filter_ert">
          <property name="text">
-          <string>Filtering with expected retention time</string>
+          <string>1D RT</string>
          </property>
         </widget>
        </item>
        <item>
         <widget class="QCheckBox" name="cb_enable_ecnfilter">
          <property name="text">
-          <string>Filtering with ECN</string>
+          <string>2D RT</string>
          </property>
         </widget>
        </item>
@@ -853,7 +879,7 @@
           </font>
          </property>
          <property name="styleSheet">
-          <string notr="true">color:cyan</string>
+          <string notr="true">color:blue</string>
          </property>
          <property name="text">
           <string>Alignment</string>
@@ -866,7 +892,7 @@
        <item>
         <widget class="QLabel" name="label_3">
          <property name="text">
-          <string>Retention time variation (mins)</string>
+          <string>Retention time variation (min)</string>
          </property>
         </widget>
        </item>
@@ -937,7 +963,7 @@
           <bool>false</bool>
          </property>
          <property name="styleSheet">
-          <string notr="true">color:cyan;</string>
+          <string notr="true">color:blue;</string>
          </property>
          <property name="text">
           <string>View Results</string>
@@ -977,7 +1003,7 @@
      <x>0</x>
      <y>0</y>
      <width>865</width>
-     <height>24</height>
+     <height>26</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
@@ -1010,17 +1036,17 @@
   </action>
   <action name="actionDatabase">
    <property name="text">
-    <string>Database</string>
+    <string>View Database</string>
    </property>
   </action>
   <action name="actionSplit_XCMS_Results">
    <property name="text">
-    <string>Export peak list(s) from XCMS output</string>
+    <string>Split Peak Lists</string>
    </property>
   </action>
   <action name="actionView_ECN">
    <property name="text">
-    <string>View ECN profiles</string>
+    <string>View ECN Profiles</string>
    </property>
   </action>
  </widget>

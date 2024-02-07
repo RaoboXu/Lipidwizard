@@ -29,6 +29,7 @@ class Config():
             self.CATEGORIES=[]
             self.MAIN_CLASSES=[]
             self.SUB_CLASSES=[]
+            self.XCMS_PROPERTIES = []
         elif os.path.exists(config_path):
             self.LoadConfig()
 
@@ -51,6 +52,7 @@ class Config():
         self.E_MASS = float(data['E_MASS'])
         self.ECN_K_RANGE = tuple(data['ECN_K_RANGE'])
         self.DatabaseColumnTitles = list(data['DatabaseColumnTitles'])
+        self.XCMS_PROPERTIES = list(data['XCMS_PROPERTIES'])
         self.IONS = list(data['IONS'])
         self.ElementTable = dict[str, float](data['ElementTable'])
         self.MatchedResultsTitles = list(data['MatchedResultsTitles'])
@@ -65,6 +67,7 @@ class Config():
         self.CATEGORIES = list(data['CATEGORIES'])
         self.MAIN_CLASSES = list(data['MAIN_CLASSES'])
         self.SUB_CLASSES = list(data['SUB_CLASSES'])
+        
 
 
 config: Config = Config(config_path='./config.json')

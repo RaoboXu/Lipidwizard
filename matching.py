@@ -88,6 +88,7 @@ def matchDatabase(database: list[Molecule], peaks: list[Peak], comparators: list
     i = 0
     while i < len(peaks):
         peak = peaks[i]
+        matched = False
         for ion in comparators:
             res_i = binary_match(peak, database, ion, var)
             l_r = len(res_i)
@@ -98,10 +99,12 @@ def matchDatabase(database: list[Molecule], peaks: list[Peak], comparators: list
                 # if pass_category_filter(r,params.Catagories) and pass_main_class_filter(r,params.MainClasses):
                 res.append(r)
             if l_r >0:
-                catch_num += l_r
-                del(peaks[i])
-                i -= 1
-        i += 1
+                catch_num += 1
+                matched = True
+        if matched: 
+            peaks.pop(i)
+        else:
+            i += 1
     t1 = process_time()
     print('Number of matched peaks:\t{}'.format(catch_num))
     print('Remains:\t\t{}'.format(len(peaks)))
